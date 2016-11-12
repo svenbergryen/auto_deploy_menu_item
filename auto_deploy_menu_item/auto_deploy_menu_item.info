@@ -1,0 +1,4 @@
+name = Auto Deploy Menu Item
+description = Stage Menu Item of Nodes for Deploy with the Node.
+package = Deployment
+core = 7.x

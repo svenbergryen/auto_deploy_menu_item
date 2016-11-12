@@ -1,0 +1,13 @@
+diff --git a/docroot/sites/all/modules/contrib/deploy/deploy.manager.inc b/docroot/sites/all/modules/contrib/deploy/deploy.manager.inc
+index 1f8e083..f2c7f85 100644
+--- a/docroot/sites/all/modules/contrib/deploy/deploy.manager.inc
++++ b/docroot/sites/all/modules/contrib/deploy/deploy.manager.inc
+@@ -103,6 +103,8 @@
+         'timestamp' => microtime(TRUE),
+       ))
+       ->execute();
++
++    module_invoke_all('deploy_add_to_plan', $plan_name, $entity_type, $entity);
+   }
+   // The query failed, most probably because of duplicate primary keys.
+   catch (Exception $e) {
